@@ -61,6 +61,23 @@ class SecurityCreditCard(CreditCard):      # Inheritance, parent class is CrediC
         else:
             return False
 
+class SpaTicket:
+    def __init__(self, customer_name, hotel_object):
+        self.customer_name = customer_name
+        self.hotel = hotel_object
+
+    def generate(self):
+        content = f"""
+
+        Thank you for your Spa reservation!
+        Here is your Spa reservation ticket.
+        Name: {self.customer_name}
+        Hotel name: {self.hotel.name} 
+                                        """
+
+        return content
+
+
 print(df)
 hotel_ID = input("Enter the hotel id: ")
 hotel = Hotel(hotel_ID)
@@ -74,9 +91,16 @@ if hotel.available():
             name = input("Enter your name: ")
             reservation_ticket = ReservationTicket(customer_name=name, hotel_object=hotel)
             print(reservation_ticket.generate())
+            spa_ticket = input("Do you want a spa reservation ? (yes/no): ")
+            if spa_ticket == "yes":
+                spa = SpaTicket(customer_name=name, hotel_object=hotel)
+                print(spa.generate())
+            if spa_ticket == "no":
+                print("Thank you for your answer")
         else:
             print("Credit card authentication failed")
     else:
         print("There is an error in your payment.")
 else:
     print("Hotel is not free")
+
