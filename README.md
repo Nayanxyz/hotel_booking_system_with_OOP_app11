@@ -21,5 +21,36 @@ You can install the required dependency via pip:
 ```bash
 pip install pandas
 ```
+## 📂 Project Structure
+​The system relies on external CSV files to simulate a database environment. Ensure the following files are present in the root directory:  
 
+​📄 main.py / advance_methods.py: The core application logic and execution scripts.  
 
+​🏨 hotels.csv: Contains hotel data (id, name, available).  
+
+​💳 cards.csv: Contains standard credit card data (number, expiration, cvc, holder).  
+
+​🔐 card_security.csv: Contains authentication data (number, password).  
+
+## 🚀 Usage   
+
+​1.Clone the repository to your local machine.  
+
+​2.Ensure the structural CSV files are populated with test data.  
+
+​3.Run the primary execution script from your terminal:  
+
+```bash
+python main.py
+```
+​ 4.**Follow the console prompts:**
+
+🏨 Enter the desired Hotel ID.  
+
+​💳 If the hotel is available, the system will proceed to payment validation.  
+
+​👤 Enter your customer name.  
+
+​🧖‍♀️ Choose whether to add a Spa reservation.  
+
+​✅ The system will output your final reservation tickets.
