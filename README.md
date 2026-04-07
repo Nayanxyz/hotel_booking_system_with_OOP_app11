@@ -17,5 +17,9 @@ Before running this project, ensure you have the following installed:
 * Python 3.7+
 * Pandas library
 
+You can install the required dependency via pip:
+```bash
+pip install pandas
+```
 
 
