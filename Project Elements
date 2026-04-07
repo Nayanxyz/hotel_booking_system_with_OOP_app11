@@ -1,0 +1,40 @@
+Libraries
+
+    pandas: A data manipulation library. The code uses it to read CSV files into DataFrames,
+            effectively using them as a substitute for a traditional database to store hotel,
+            credit card, and security information.
+
+    abc: The Abstract Base Classes module. The code imports ABC and abstractmethod to create
+            foundational blueprint classes that force child classes to follow a specific structure.
+
+Classes
+
+    Hotel: Represents a hotel property. It handles the initialization of hotel details,
+            checks for room availability, and executes the booking process by modifying the external data source.
+
+    CreditCard: Represents a standard credit card. It takes a card number upon creation and provides
+                functionality to validate the card's expiration, CVC, and holder name against a dataset.
+
+    SecurityCreditCard: A child class that inherits from CreditCard. It extends the base
+                        functionality by adding a secondary authentication layer that checks a password.
+
+    ReservationTicket: Represents a booking confirmation. It aggregates customer information and
+                        a Hotel object to generate a formatted reservation receipt.
+
+    SpaTicket: Similar to the reservation ticket, it represents an add-on service.
+                It uses customer and hotel data to generate a specific spa confirmation receipt.
+
+    Ticket: An abstract base class. It serves purely as a structural template, establishing the rule
+            that any inheriting ticket class must possess a generation method.
+
+    DigitalTicket: A child class inheriting from Ticket. It represents an electronic ticket
+                    format and provides its own specific implementation for generating the ticket content.
+
+Properties & Variables
+
+    watermark (Class Variable): A string assigned directly to the Hotel class. It is a shared attribute,
+                                meaning every hotel object created will possess this exact same value.
+
+    the_customer_name (Property): Located in ReservationTicket. It is accessed like a variable but executes
+                                    a method behind the scenes. It takes the raw customer name, strips away extra spaces,
+                                     and capitalizes the first letters for clean formatting.
