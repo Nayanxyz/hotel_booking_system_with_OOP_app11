@@ -49,3 +49,32 @@ Magic Methods
                                 it instructs the program to consider two completely different hotel objects
                                 as "equal" as long as their hotel_id values match.
 
+Methods
+
+    book (Instance Method): Belongs to the Hotel class. It changes the specific hotel's availability
+                            status to "no" within the DataFrame and immediately overwrites the physical
+                            CSV file to lock in the reservation.
+
+    available (Instance Method): Belongs to the Hotel class. It queries the DataFrame to check if the
+                                specific hotel's status is listed as "yes" and returns a True/False value accordingly.
+
+    validate (Instance Method): Belongs to CreditCard. It packages the provided expiration date,
+                                CVC, and holder name into a dictionary and checks if that exact combination
+                                exists within the loaded credit card dataset.
+
+    authenticate (Instance Method): Belongs to SecurityCreditCard. It locates the row matching
+                                    the instance's card number in the security dataset and checks if the
+                                     provided password matches the stored password.
+
+    generate (Instance Method): Found in ReservationTicket, SpaTicket, and DigitalTicket. It constructs and
+                                returns a formatted text block containing the final receipt details.
+
+    generate (Abstract Method): Found in the Ticket class. It contains no code of its own (pass);
+                                it exists solely to force any class inheriting from Ticket to create its own
+                                functional version of the method.
+
+    get_hotel_count (Class Method): Bound to the Hotel class itself rather than an instance. It accepts
+                                    the class (cls) and a dataset, returning the total number of items in that dataset.
+
+    convert (Static Method): Located in ReservationTicket. It acts as an independent utility function that
+                            multiplies a given amount by 1.2. It requires no knowledge of the class or object state to execute.
