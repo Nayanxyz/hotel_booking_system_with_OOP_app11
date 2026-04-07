@@ -38,3 +38,14 @@ Properties & Variables
     the_customer_name (Property): Located in ReservationTicket. It is accessed like a variable but executes
                                     a method behind the scenes. It takes the raw customer name, strips away extra spaces,
                                      and capitalizes the first letters for clean formatting.
+
+Magic Methods
+
+    __init__ (Constructor): The initialization method triggered automatically when a new object is created.
+                            The codebase uses it across multiple classes to assign initial values
+                            (like IDs, names, or reference objects) to the newly formed instance.
+
+    __eq__ (Equality Operator): Overrides how Python handles the == comparison. In the Hotel class,
+                                it instructs the program to consider two completely different hotel objects
+                                as "equal" as long as their hotel_id values match.
+
