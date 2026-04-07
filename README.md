@@ -11,4 +11,11 @@ A Python-based, object-oriented console application that manages hotel reservati
 * **🎟️ Dynamic Ticket Generation:** Generates customized string representations of Reservation Tickets and optional Spa Tickets.
 * **🗄️ Data Management:** Utilizes `pandas` to read and manipulate external CSV files acting as the system's database.
 
+## 🛠️ Prerequisites
+
+Before running this project, ensure you have the following installed:
+* Python 3.7+
+* Pandas library
+
+
 
